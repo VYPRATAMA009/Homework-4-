@@ -1,6 +1,6 @@
 // tes pertama
 // random nomor generator 1-50
-const array = 100;
+const array = 100;// junlah array awal 100
 
 const arraytotal = [];
 
@@ -71,10 +71,56 @@ function ratarata(total,jumlahindeks) {
 const RatarataGenap = ratarata(TotalGenap,arrayindeksgenap.length)
 const RatarataGanjil = ratarata(TotalGanjil,arrayindeksganjil.length)
 
-// fungsi perbandingan
+// fungsi perbandingan array indeks genap dan array indeks ganjil
+function perbandinganaaray(arraygenap,arrayganjil){
+    const MinimalGenap = findMin(arraygenap)
+    const MinimalGanjil = findMin(arrayganjil)
+    const MaksimalGenap = findMax(arraygenap)
+    const MaksimalGanjil = findMax(arrayganjil)
+    const TotalGenap = total(arraygenap)
+    const TotalGanjil = total(arrayganjil)
+    const RatarataGenap = ratarata(TotalGenap,arraygenap.length)
+    const RatarataGanjil = ratarata(TotalGanjil,arrayganjil.length)
+    
+    // membandingkan min
+    if (MinimalGenap > MinimalGanjil){
+        console.log("Min lebih besar array genap")
+    } else if (MinimalGenap < MinimalGanjil){
+        console.log("Min lebih besar array ganjil")
+    } else {
+        console.log("Min memeiliki nilai yang sama antara array genap dan ganjil")
+    }
 
-// fungsi main console
-console.log(arraytotal)// create random number generator
+    //membandingkan max
+    if (MaksimalGenap > MaksimalGanjil){
+        console.log("Max lebih besar array genap")
+    } else if (MaksimalGenap < MaksimalGanjil){
+        console.log("Max lebih besar array ganjil")
+    } else {
+        console.log("Max memeiliki nilai yang sama antara array genap dan ganjil")
+    }
+
+    //membandingkan total
+    if (TotalGenap > TotalGanjil){
+        console.log("Total lebih besar array genap")
+    } else if (TotalGenap < TotalGanjil){
+        console.log("Total lebih besar array ganjil")
+    } else {
+        console.log("Total memeiliki nilai yang sama antara array genap dan ganjil")
+    }
+
+    //membandingkan Rata rata
+    if (RatarataGenap > RatarataGanjil){
+        console.log("Rata rata lebih besar array genap")
+    } else if (RatarataGenap < RatarataGanjil){
+        console.log("Rata rata lebih besar array ganjil")
+    } else {
+        console.log("Ratarata memeiliki nilai yang sama antara array genap dan ganjil")
+    }    
+}
+
+// fungsi console untuk print
+console.log(arraytotal)// print array total
 console.log("Array indeks genap:", arrayindeksgenap);// print array indeks genap
 console.log("Array indeks ganjil:", arrayindeksganjil);// print array indeks ganjil
 console.log("Nilai Min pada array indeks genap: ", MinimalGenap);
@@ -85,3 +131,4 @@ console.log("Total Nilai pada array indeks genap: ", TotalGenap);
 console.log("Total Nilai pada array indeks ganjil: ", TotalGanjil);
 console.log("Rata Rata Nilai pada array indeks genap: ",RatarataGenap);
 console.log("Rata Rata Nilai pada array indeks ganjil: ",RatarataGanjil);
+perbandinganaaray(arrayindeksgenap,arrayindeksganjil)// memanggil fungsi perbandingan
