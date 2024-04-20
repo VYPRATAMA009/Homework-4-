@@ -25,13 +25,10 @@ for (let i = 0; i < arraytotal.length; i++ ){
 
 // fungsi min
 function findMin(array) {
-    if (array.length === 0) {
-      return undefined;
-    }
     let min = array[0];
     for (let i = 1; i < array.length; i++) {
       if (array[i] < min) {
-    min = array[i];
+        min = array[i];
       }
     }
     return min;
@@ -42,13 +39,10 @@ const MinimalGanjil = findMin(arrayindeksganjil)
 
 // fungsi max
 function findMax(array) {
-    if (array.length === 0) {
-      return undefined;
-    }
     let max = array[0];
     for (let i = 1; i < array.length; i++) {
       if (array[i] > max) {
-    max = array[i];
+        max = array[i];
       }
     }
     return max;
@@ -58,8 +52,26 @@ const MaksimalGenap = findMax(arrayindeksgenap)
 const MaksimallGanjil = findMax(arrayindeksganjil)
 
 // fungsi total
+function total(array) {
+    let total = array[0];
+    for (let i = 1; i < array.length; i++) {
+        total = total + array[i]
+    }
+    return total;
+  }
+
+const TotalGenap = total(arrayindeksgenap)
+const TotalGanjil = total(arrayindeksganjil)
+
 
 // fungsi rata rata
+function ratarata(total,jumlahindeks) {
+    return total/ jumlahindeks
+}
+const RatarataGenap = ratarata(TotalGenap,arrayindeksgenap.length)
+const RatarataGanjil = ratarata(TotalGanjil,arrayindeksganjil.length)
+
+// fungsi perbandingan
 
 // fungsi main console
 console.log(arraytotal)// create random number generator
@@ -68,4 +80,8 @@ console.log("Array indeks ganjil:", arrayindeksganjil);// print array indeks gan
 console.log("Nilai Min pada array indeks genap: ", MinimalGenap);
 console.log("Nilai Min pada array indeks ganjil: ", MinimalGanjil)
 console.log("Nilai Max pada array indeks genap: ", MaksimalGenap);
-console.log("Nilai Max pada array indeks ganjil: ", MaksimallGanjil)
+console.log("Nilai Max pada array indeks ganjil: ", MaksimallGanjil);
+console.log("Total Nilai pada array indeks genap: ", TotalGenap);
+console.log("Total Nilai pada array indeks ganjil: ", TotalGanjil);
+console.log("Rata Rata Nilai pada array indeks genap: ",RatarataGenap);
+console.log("Rata Rata Nilai pada array indeks ganjil: ",RatarataGanjil);
