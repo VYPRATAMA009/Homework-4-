@@ -88,7 +88,7 @@ function perbandinganaaray(arraygenap,arrayganjil){
     } else if (MinimalGenap < MinimalGanjil){
         console.log("Min lebih besar array ganjil")
     } else {
-        console.log("Min memeiliki nilai yang sama antara array genap dan ganjil")
+        console.log("Min memiliki nilai yang sama antara array genap dan ganjil")
     }
 
     //membandingkan max
@@ -97,7 +97,7 @@ function perbandinganaaray(arraygenap,arrayganjil){
     } else if (MaksimalGenap < MaksimalGanjil){
         console.log("Max lebih besar array ganjil")
     } else {
-        console.log("Max memeiliki nilai yang sama antara array genap dan ganjil")
+        console.log("Max memiliki nilai yang sama antara array genap dan ganjil")
     }
 
     //membandingkan total
@@ -106,7 +106,7 @@ function perbandinganaaray(arraygenap,arrayganjil){
     } else if (TotalGenap < TotalGanjil){
         console.log("Total lebih besar array ganjil")
     } else {
-        console.log("Total memeiliki nilai yang sama antara array genap dan ganjil")
+        console.log("Total memiliki nilai yang sama antara array genap dan ganjil")
     }
 
     //membandingkan Rata rata
@@ -115,7 +115,7 @@ function perbandinganaaray(arraygenap,arrayganjil){
     } else if (RatarataGenap < RatarataGanjil){
         console.log("Rata rata lebih besar array ganjil")
     } else {
-        console.log("Ratarata memeiliki nilai yang sama antara array genap dan ganjil")
+        console.log("Ratarata memiliki nilai yang sama antara array genap dan ganjil")
     }    
 }
 
