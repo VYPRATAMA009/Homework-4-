@@ -8,7 +8,7 @@ for (let i = 0; i < array; i++) {
     const nilairandom= Math.floor(Math.random() * 50) + 1;
     arraytotal.push(nilairandom);
   }
-console.log(arraytotal)
+
 
 // Pemisah array indeks genap dan array index ganjil
 const arrayindeksgenap = [];
@@ -22,14 +22,50 @@ for (let i = 0; i < arraytotal.length; i++ ){
     }
 
 }
-console.log("Array indeks genap:", arrayindeksgenap);
-console.log("Array indeks ganjil:", arrayindeksganjil);
+
 // fungsi min
+function findMin(array) {
+    if (array.length === 0) {
+      return undefined;
+    }
+    let min = array[0];
+    for (let i = 1; i < array.length; i++) {
+      if (array[i] < min) {
+    min = array[i];
+      }
+    }
+    return min;
+  }
+
+const MinimalGenap = findMin(arrayindeksgenap)
+const MinimalGanjil = findMin(arrayindeksganjil)
 
 // fungsi max
+function findMax(array) {
+    if (array.length === 0) {
+      return undefined;
+    }
+    let max = array[0];
+    for (let i = 1; i < array.length; i++) {
+      if (array[i] > max) {
+    max = array[i];
+      }
+    }
+    return max;
+  }
+
+const MaksimalGenap = findMax(arrayindeksgenap)
+const MaksimallGanjil = findMax(arrayindeksganjil)
 
 // fungsi total
 
 // fungsi rata rata
 
-// fungsi main 
+// fungsi main console
+console.log(arraytotal)// create random number generator
+console.log("Array indeks genap:", arrayindeksgenap);// print array indeks genap
+console.log("Array indeks ganjil:", arrayindeksganjil);// print array indeks ganjil
+console.log("Nilai Min pada array indeks genap: ", MinimalGenap);
+console.log("Nilai Min pada array indeks ganjil: ", MinimalGanjil)
+console.log("Nilai Max pada array indeks genap: ", MaksimalGenap);
+console.log("Nilai Max pada array indeks ganjil: ", MaksimallGanjil)
